@@ -1,0 +1,110 @@
+[
+ {
+  "key": "rocket",
+  "emoji": "🚀"
+ },
+ {
+  "key": "user",
+  "emoji": "👤"
+ },
+ {
+  "key": "users",
+  "emoji": "👥"
+ },
+ {
+  "key": "tag",
+  "emoji": "🏷"
+ },
+ {
+  "key": "search",
+  "emoji": "🔍"
+ },
+ {
+  "key": "trophy",
+  "emoji": "🏆"
+ },
+ {
+  "key": "question",
+  "emoji": "❓"
+ },
+ {
+  "key": "back",
+  "emoji": "⬅️"
+ },
+ {
+  "key": "refresh",
+  "emoji": "🔄"
+ },
+ {
+  "key": "chart",
+  "emoji": "📊"
+ },
+ {
+  "key": "bulb",
+  "emoji": "💡"
+ },
+ {
+  "key": "gauge",
+  "emoji": "💯"
+ },
+ {
+  "key": "star",
+  "emoji": "⭐"
+ },
+ {
+  "key": "gift",
+  "emoji": "🎁"
+ },
+ {
+  "key": "swords",
+  "emoji": "⚔️"
+ },
+ {
+  "key": "wallet",
+  "emoji": "👛"
+ },
+ {
+  "key": "hourglass",
+  "emoji": "⏳"
+ },
+ {
+  "key": "check",
+  "emoji": "✅"
+ },
+ {
+  "key": "cross",
+  "emoji": "❌"
+ },
+ {
+  "key": "warning",
+  "emoji": "⚠️"
+ },
+ {
+  "key": "chat",
+  "emoji": "💬"
+ },
+ {
+  "key": "down",
+  "emoji": "👇"
+ },
+ {
+  "key": "crown",
+  "emoji": "👑"
+ },
+ {
+  "key": "fire",
+  "emoji": "🔥"
+ },
+ {
+  "key": "diamond",
+  "emoji": "💎"
+ },
+ {
+  "key": "lock",
+  "emoji": "🔒"
+ },
+ {
+  "key": "send",
+  "emoji": "📤"
+ }
+]

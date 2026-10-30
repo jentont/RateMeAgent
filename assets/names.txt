@@ -1,0 +1,78 @@
+# Известные имена и фамилии: футболисты, спортсмены, музыканты,
+# публичные люди, а также частые личные имена.
+#
+# Отдельно от words.txt, потому что стоят они иначе: @ronaldo и @messi
+# покупают не за словарность, а за узнаваемость — такое имя нужно
+# фанату, а не первому встречному. В словаре английского их нет, и без
+# этого списка они шли бы как «не слово», то есть в цену мусора.
+#
+# Список руками и заведомо неполный: это не база знаменитостей, а
+# перечень того, что реально всплывает в дорогих юзернеймах.
+
+# футбол
+messi ronaldo neymar mbappe haaland benzema modric kroos salah kane
+lewandowski suarez iniesta xavi pique ramos zidane ronaldinho pele maradona
+beckham rooney gerrard lampard terry drogba henry vieira cantona zlatan
+ibrahimovic buffon casillas neuer donnarumma alisson courtois oblak
+griezmann dembele vinicius rodrygo bellingham foden saka rashford
+sterling grealish mahrez silva bruno fernandes pogba kante hazard
+lukaku havertz werner mount rice odegaard martinez lautaro dybala
+chiesa barella verratti jorginho insigne immobile morata isco
+alaba hummels muller kimmich goretzka sane gnabry reus
+guardiola mourinho klopp ancelotti simeone conte tuchel allegri
+
+# другие виды спорта
+jordan lebron kobe curry durant harden shaq iverson pippen
+messi federer nadal djokovic murray alcaraz sinner medvedev
+hamilton verstappen leclerc norris alonso vettel schumacher senna
+tyson ali mcgregor khabib usyk fury joshua canelo
+brady mahomes gretzky ovechkin crosby
+
+# музыка и культура
+drake eminem kanye jayz rihanna beyonce adele shakira madonna
+weeknd bieber sheeran swift ariana billie dua lana
+tupac biggie snoop kendrick travis future migos
+lennon mccartney jagger bowie prince elvis sinatra marley
+mozart bach beethoven chopin vivaldi
+
+# кино и техника
+nolan tarantino spielberg scorsese kubrick fincher villeneuve
+dicaprio pitt clooney depp keanu cruise hanks freeman pacino
+deniro nicholson jackman downey hemsworth gosling
+musk bezos gates jobs zuckerberg buffett durov pavel telegram
+tesla apple google amazon nvidia oracle
+
+# частые личные имена
+adam adrian alan albert alex alexander alfred andrew angel anthony
+arthur austin ben benjamin bernard blake brandon brian bruce bryan
+caleb calvin cameron carl carlos charles chris christian craig
+daniel danny david dean dennis derek diego dylan edward elias
+elijah emma emily eric ethan eugene evan felix frank gabriel
+george gerald gordon grant greg harry henry hugo ian isaac
+ivan jack jacob james jason jasper jeffrey jeremy jesse john
+jonathan jordan jose joseph joshua julian justin karl keith
+kevin kyle lance larry laura leo leon leonard levi lewis liam
+logan louis lucas luke marcus mark martin mason matthew maurice
+max maxwell michael miguel miles nathan neil nicholas noah
+norman oliver omar oscar owen patrick paul peter philip
+quentin ralph raymond richard robert roger roland roman ronald
+ross russell ryan samuel scott sean sebastian sergio seth
+simon spencer stanley stephen steven stuart theodore thomas
+timothy tobias todd tommy travis trevor tyler victor vincent
+walter warren wayne wesley william wyatt xavier zachary
+
+# женские
+alice amanda amber amelia andrea angela anna ashley aurora
+barbara bella beth bianca bridget brooke camila carmen carol
+caroline catherine chloe claire clara daisy dana daniela diana
+donna dora elena eliza ella ellen elsa emily emma erica
+eva evelyn fiona flora gina grace hannah hazel heather helen
+holly irene iris isabel ivy jade jane janet jasmine jenna
+jessica joan julia juliet karen kate katie kayla kelly kim
+lara laura lauren leah lena lily linda lisa lucia lucy luna
+maria marina martha mary maya megan melanie mia michelle mila
+mira miranda molly monica nadia naomi natalie nicole nina
+nora olivia paula pearl penny phoebe rachel rebecca rita rosa
+rose ruby ruth sabrina sadie sandra sara sarah selena serena
+sofia sonia stella susan sydney tara tessa tina valeria
+vanessa vera veronica victoria violet vivian wendy yasmin zoe

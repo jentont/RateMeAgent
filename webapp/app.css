@@ -1,0 +1,172 @@
+/* Батл профилей — Solutions Design в тёмном варианте, как карточки бота:
+   графит, серебро, Unbounded для цифр, Onest для текста, Caveat — пометки
+   розовым. Цвета нет нигде, кроме звезды валюты: смысл несёт яркость. */
+
+:root {
+  --bg: #0d0d10;
+  --bg-top: #1d1d21;
+  --panel: rgba(255, 255, 255, 0.045);
+  --panel-strong: rgba(255, 255, 255, 0.075);
+  --line: rgba(255, 255, 255, 0.08);
+  --text: #ffffff;
+  --muted: #94969f;
+  --steel: #7d7e88;
+  --silver: #c4c5cc;
+  --pink: #f2a7b8;
+  --empty: #2c2d34;
+  --radius: 22px;
+  --tabbar: 64px;
+  --safe-b: env(safe-area-inset-bottom, 0px);
+}
+
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+html, body { margin: 0; height: 100%; overflow: hidden; }
+body {
+  background: radial-gradient(120% 60% at 15% 0%, #2a2d36 0%, transparent 60%),
+              linear-gradient(180deg, var(--bg-top) 0%, var(--bg) 70%);
+  color: var(--text);
+  font: 500 15px/1.35 "Onest", system-ui, -apple-system, sans-serif;
+}
+button { font: inherit; color: inherit; border: 0; background: none; cursor: pointer; padding: 0; }
+svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.7;
+      stroke-linecap: round; stroke-linejoin: round; flex: none; }
+svg.star { width: 1em; height: 1em; stroke: none; vertical-align: -0.12em; }
+
+#app { height: 100%; display: flex; flex-direction: column; }
+
+/* --- шапка ---------------------------------------------------------------- */
+.top { display: flex; align-items: center; justify-content: space-between;
+       padding: 14px 16px 8px; gap: 12px; }
+.who { display: flex; align-items: center; gap: 10px; min-width: 0; }
+.ava { width: 40px; height: 40px; border-radius: 13px; background: #24252b center/cover;
+       border: 1px solid rgba(196, 197, 204, 0.35); flex: none; display: grid; place-items: center;
+       font: 800 16px "Unbounded"; color: var(--steel); }
+.who-text { min-width: 0; }
+.who-name { font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.who-note { font: 700 17px/1 "Caveat"; color: var(--pink); }
+.balance { display: flex; align-items: center; gap: 6px; padding: 8px 14px; border-radius: 999px;
+           background: var(--panel-strong); border: 1px solid var(--line);
+           font: 800 15px "Unbounded"; }
+
+/* --- экраны --------------------------------------------------------------- */
+#screens { flex: 1; position: relative; overflow: hidden; }
+.screen { position: absolute; inset: 0; padding: 4px 16px calc(var(--tabbar) + var(--safe-b) + 12px);
+          display: none; flex-direction: column; gap: 10px; overflow: hidden; }
+.screen.active { display: flex; animation: rise .22s ease; }
+@keyframes rise { from { opacity: 0; transform: translateY(6px); } }
+
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius);
+        padding: 14px 16px; position: relative; }
+.kicker { font: 700 11px "Onest"; letter-spacing: .16em; text-transform: uppercase; color: var(--steel); }
+.muted { color: var(--muted); font-size: 13px; }
+
+.hero-head { display: flex; justify-content: space-between; align-items: flex-start; }
+.hero-bank { font: 900 34px/1.1 "Unbounded"; margin: 4px 0 2px; display: flex; gap: 8px; align-items: center; }
+.solik { width: 92px; margin: -6px -6px 0 0; filter: drop-shadow(0 8px 14px rgba(0, 0, 0, .5)); }
+.podium { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 12px; }
+.podium div { background: rgba(255, 255, 255, .04); border-radius: 14px; padding: 8px 10px; }
+.podium b { display: block; font: 800 15px "Unbounded"; }
+.podium span { font-size: 12px; color: var(--muted); }
+
+.mine { display: flex; align-items: center; gap: 14px; }
+.mine-score { font: 900 36px/1 "Unbounded"; min-width: 92px; }
+.mine-score small { font: 700 14px "Onest"; color: var(--muted); margin-left: 2px; }
+.mine-text { flex: 1; min-width: 0; }
+.mine-title { font-weight: 700; }
+.icon-btn { width: 40px; height: 40px; border-radius: 13px; background: var(--panel-strong);
+            display: grid; place-items: center; border: 1px solid var(--line); }
+.icon-btn:disabled { opacity: .35; }
+
+.btn { height: 50px; border-radius: 16px; font-weight: 700; display: flex; align-items: center;
+       justify-content: center; gap: 8px; background: var(--panel-strong); border: 1px solid var(--line); }
+.btn.primary { background: linear-gradient(180deg, #f4f4f6, #c9cad1); color: #111114; border: 0; }
+.btn.small { height: 44px; padding: 0 16px; border-radius: 14px; }
+.btn:disabled { opacity: .45; }
+.btn:active, .stake:active, .chip:active { transform: scale(.98); }
+
+/* --- списки по страницам, без бесконечной ленты --------------------------- */
+.list { flex: 1; min-height: 0; display: flex; flex-direction: column; overflow: hidden; }
+.list-head { display: flex; justify-content: space-between; align-items: center;
+             font-weight: 700; margin-bottom: 8px; }
+.pager { display: flex; align-items: center; gap: 4px; color: var(--muted); font-size: 13px; }
+.pager button { width: 30px; height: 30px; border-radius: 10px; display: grid; place-items: center; }
+.pager button:disabled { opacity: .25; }
+.pager svg { width: 18px; height: 18px; }
+.row { display: flex; align-items: center; gap: 10px; padding: 9px 0; border-top: 1px solid var(--line); }
+.row:first-child { border-top: 0; }
+.row .n { width: 26px; font: 800 13px "Unbounded"; color: var(--steel); }
+.row .t { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.row .t small { display: block; color: var(--muted); font-size: 12px; }
+.row .v { font: 800 15px "Unbounded"; }
+.row.me .t { color: var(--pink); }
+.row .plus { color: var(--text); }
+.row .minus { color: var(--steel); }
+.empty { color: var(--muted); text-align: center; padding: 18px 0; font-size: 14px; }
+
+/* --- шкала из десяти делений, как на карточке ------------------------------ */
+.scale { display: flex; gap: 3px; margin-top: 6px; }
+.scale i { flex: 1; height: 6px; border-radius: 3px; background: var(--empty); position: relative; overflow: hidden; }
+.scale i b { position: absolute; inset: 0 auto 0 0; background: var(--silver); border-radius: 3px; }
+
+/* --- дуэли ----------------------------------------------------------------- */
+.stakes { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+.stake { border-radius: 18px; padding: 12px 14px; background: var(--panel-strong);
+         border: 1px solid var(--line); text-align: left; }
+.stake b { display: flex; align-items: center; gap: 6px; font: 900 22px "Unbounded"; }
+.stake span { color: var(--muted); font-size: 12px; }
+.waits { display: flex; gap: 6px; flex-wrap: wrap; }
+.wait { display: flex; align-items: center; gap: 6px; padding: 6px 6px 6px 12px; border-radius: 999px;
+        background: var(--panel-strong); border: 1px dashed rgba(196, 197, 204, .35); font-size: 13px; }
+.wait button { width: 24px; height: 24px; border-radius: 50%; display: grid; place-items: center; }
+.wait svg { width: 16px; height: 16px; stroke-width: 2; }
+.note { font: 700 18px/1.1 "Caveat"; color: var(--pink); }
+
+/* --- кошелёк ---------------------------------------------------------------- */
+.wallet { background: linear-gradient(160deg, #2a2b31 0%, #111114 100%); overflow: hidden; min-height: 132px; }
+.kicker.light { color: var(--silver); }
+.wallet-sum { font: 900 40px/1.1 "Unbounded"; display: flex; gap: 10px; align-items: center; margin: 6px 0 4px; }
+.wallet-note { font: 700 18px/1.05 "Caveat"; color: var(--pink); max-width: 62%; position: relative; z-index: 1; }
+.wallet-cat { position: absolute; right: -4px; bottom: -14px; width: 120px; }
+.chips { display: flex; gap: 8px; flex-wrap: wrap; }
+.chip { padding: 9px 14px; border-radius: 999px; background: var(--panel-strong);
+        border: 1px solid var(--line); font: 800 14px "Unbounded"; display: flex; gap: 5px; align-items: center; }
+.row-input { display: flex; gap: 8px; }
+.row-input input { flex: 1; min-width: 0; height: 44px; border-radius: 14px; border: 1px solid var(--line);
+                   background: rgba(0, 0, 0, .25); color: var(--text); padding: 0 14px; font: 600 15px "Onest"; outline: none; }
+
+/* --- таббар ------------------------------------------------------------------ */
+.tabbar { position: fixed; left: 12px; right: 12px; bottom: calc(10px + var(--safe-b));
+          height: var(--tabbar); border-radius: 22px; display: grid; grid-template-columns: repeat(4, 1fr);
+          background: rgba(30, 31, 36, .78); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
+          border: 1px solid var(--line); padding: 6px; }
+.tab { border-radius: 16px; display: flex; flex-direction: column; align-items: center; justify-content: center;
+       gap: 2px; color: var(--steel); font-size: 11px; font-weight: 600; transition: background .2s, color .2s; }
+.tab.active { background: rgba(255, 255, 255, .09); color: var(--text); }
+
+/* --- шторка итога и тост ----------------------------------------------------- */
+.sheet { position: fixed; inset: 0; background: rgba(0, 0, 0, .55); display: flex; align-items: flex-end; z-index: 10; }
+.sheet[hidden] { display: none; }
+.sheet-card { width: 100%; background: #17171b; border-radius: 26px 26px 0 0; border-top: 1px solid var(--line);
+              padding: 20px 18px calc(18px + var(--safe-b)); animation: up .25s ease; }
+@keyframes up { from { transform: translateY(40px); opacity: 0; } }
+.sheet h3 { margin: 0 0 4px; font: 800 20px "Unbounded"; }
+.vs { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 10px; margin: 16px 0; text-align: center; }
+.vs .side b { display: block; font: 900 34px "Unbounded"; }
+.vs .side span { color: var(--muted); font-size: 13px; display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.vs .side.won b { color: var(--text); }
+.vs .side.lost b { color: var(--steel); }
+.vs em { font: 700 22px "Caveat"; color: var(--pink); font-style: normal; }
+.sheet .btns { display: grid; gap: 8px; }
+.result-line { font: 900 26px "Unbounded"; display: flex; gap: 8px; align-items: center; justify-content: center; }
+
+.toast { position: fixed; left: 16px; right: 16px; top: 12px; z-index: 20; padding: 12px 14px; border-radius: 16px;
+         background: #f2f2f4; color: #111114; font-weight: 600; text-align: center; animation: rise .2s ease; }
+.toast[hidden] { display: none; }
+
+@media (max-height: 640px) {
+  .hero-bank { font-size: 28px; }
+  .solik { width: 70px; }
+  .podium { margin-top: 8px; }
+  .mine-score { font-size: 30px; }
+  .btn { height: 44px; }
+}

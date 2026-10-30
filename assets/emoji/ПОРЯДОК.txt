@@ -1,0 +1,29 @@
+Порядок для @Stickers: файл → эмодзи, который отправить после него.
+
+ 1. rocket.tgs → 🚀
+ 2. user.tgs → 👤
+ 3. users.tgs → 👥
+ 4. tag.tgs → 🏷
+ 5. search.tgs → 🔍
+ 6. trophy.tgs → 🏆
+ 7. question.tgs → ❓
+ 8. back.tgs → ⬅️
+ 9. refresh.tgs → 🔄
+10. chart.tgs → 📊
+11. bulb.tgs → 💡
+12. gauge.tgs → 💯
+13. star.tgs → ⭐
+14. gift.tgs → 🎁
+15. swords.tgs → ⚔️
+16. wallet.tgs → 👛
+17. hourglass.tgs → ⏳
+18. check.tgs → ✅
+19. cross.tgs → ❌
+20. warning.tgs → ⚠️
+21. chat.tgs → 💬
+22. down.tgs → 👇
+23. crown.tgs → 👑
+24. fire.tgs → 🔥
+25. diamond.tgs → 💎
+26. lock.tgs → 🔒
+27. send.tgs → 📤

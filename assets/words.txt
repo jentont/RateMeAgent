@@ -1,0 +1,144 @@
+# Частые английские слова, из которых собирают юзернеймы.
+# Нужен, чтобы отличить цельное слово от произносимой бессмыслицы:
+# @storm и @stworn читаются одинаково легко, а стоят по-разному.
+# Список намеренно короткий — это не словарь языка, а перечень того,
+# что реально всплывает в дорогих продажах Fragment.
+ace act add age aim air all and ant any ape arc arm art ash ask
+axe bad bag ban bar bat bay bed bee beg bet bid big bin bit bow box boy bug bus buy
+cab can cap car cat cop cow cry cup cut dad day den dew die dig dim dog dot dry due dye
+ear eat egg ego elf elk end era eve eye fan far fat fax fed few fig fin fit fix fly fog fox fun fur
+gap gas gel gem get gig gin god gold gum gun gut guy gym
+hat hen her hey hid hip hit hog hot how hub hug hut ice ink inn ion ivy
+jam jar jaw jet job jog joy jug key kid kin kit lab lad lap law lay leg lid lip log lot low
+mad man map max may men mix mob mud mug net new nod nor not now nut
+oak oar oat odd oil old one orb ore out owl own
+pad pan pat paw pay pen pet pie pig pin pit pop pot pro pub pug pun pup
+rad rag ram rat raw ray red rib rid rim rip rob rod rot row rub rug rum run
+sad sag sea see set sew she shy sin sip sir sit six ski sky sly sob son soy spa spy sum sun
+tab tag tan tap tar tax tea ten the tie tin tip toe ton top toy try tub tug two
+use van vet via vow wag war wax way web wet who why wig win wit wok won wow
+yak yes yet you zap zen zip zoo
+able acid aero aged aids ally aqua arch area army atom aunt aura auto away axis
+baby back bail bait bake bald ball band bang bank bare bark barn base bass bath beam bean bear beat
+beef been beer bell belt bend bent best beta bike bill bind bird bite blow blue blur boat body boil
+bold bolt bomb bond bone book boom boot bore born boss both bowl brew brow bulk bull burn bush busy
+cafe cage cake calm came camp cane card care cart case cash cast cave cell cent chef chip chop city
+clan claw clay clip club clue coal coat code coin cold colt comb come cook cool cope copy cord core
+cork corn cost cozy crab crew crop crow cube cure curl cute dark dart dash data date dawn dead deal
+dean dear debt deck deed deep deer demo dent desk dial dice diet dime dine dirt dish disk dive dock
+dome done done doom door dose dove down doze draw drew drip drop drum dual duck dude duel duke dull
+dune dusk dust duty each earl earn ease east easy echo edge edit epic even ever evil exam exit face
+fact fade fail fair fake fall fame farm fast fate fear feat feed feel fell fern feud fill film find
+fine fire firm fish fist five flag flat flaw flex flip flow foam foil fold folk font food fool foot
+ford fore fork form fort foul four fowl free frog from fuel full fund fury fuse gain gale game gang
+gate gaze gear gene gift gild girl give glad glow glue goal goat gold golf gone good gore gown grab
+gram gray grew grid grim grin grip grit grow gulf gull guru gust hail hair half hall halt hand hang
+hard hare harm hash hate haul have hawk haze head heal heap hear heat heir held hell helm help herb
+herd hero hide high hike hill hint hire hive hold hole holy home hood hoof hook hope horn hose host
+hour huge hulk hunt hurt hymn icon idea idle idol inch iron isle item jade jail jazz jeep jest jinx
+join joke jolt jump junk jury just keen keep kept kick kill kind king kiss kite knee knew knit knot
+know lace lack lady laid lake lamb lamp land lane lark lash last late lava lawn lazy lead leaf leak
+lean leap left lend lens lest liar lick life lift like lily limb lime limp line link lion list live
+load loaf loan lock loft logo lone long look loop lord lore lose loss lost loud love luck lump lung
+lure lush lynx made maid mail main make male mall malt many maple mark mars mash mask mass mast mate
+math maze mead meal mean meat meet melt memo mend menu mesh mess mice mild mile milk mill mind mine
+mint mist mite moat mock mode mold mole monk mono mood moon more moss most moth move much mule mute
+myth nail name navy near neat neck need neon nest news next nice nick nine node none noon norm nose
+note noun nova numb oath obey odds omen omit once only onyx open opus oral orbit oval oven over owed
+pace pack page paid pain pair pale palm pane park part pass past path peak pear peel peer pens pest
+pick pier pike pile pill pine ping pink pint pipe pity plan play plot plug plum plus poem poet pole
+poll pond pony pool poor pope pore pork port pose post pour pray prey prim prom prop pull pulp pump
+pure push quad quay quest quiz quit race rack raft rage raid rail rain rake ramp rang rank rant rare
+rash rate rave read real reap rear reed reef reel rely rent rest rice rich ride rift ring riot rise
+risk rite road roam roar robe rock rode role roll roof room root rope rose ruby rude ruin rule rush
+rust sage said sail sake sale salt same sand sane sank save scan scar seal seam seat seed seek seem
+seen self sell send sent ship shop shot show shut sick side sift sign silk silo sing sink site size
+skin skip slab slam slap slid slim slip slot slow slug snap snow soap soar sock soft soil sold sole
+solo some song soon sore sort soul soup sour spar spin spot spun spur stag star stay stem step stew
+stir stop stow stub such suit sung sunk sure surf swan swap sway swim tack tail take tale talk tall
+tame tank tape task taxi teal team tear tech teen tell tend tent term test text than that thaw them
+then they thin this thus tick tide tidy tier tile till tilt time tint tiny tire toad toll tomb tone
+tool torn toss tour town trap tray tree trek trim trio trip true tuba tube tuck tune turf turn twin
+type unit upon urge used user vain vale vane vase vast veil vein vent verb very vest veto vibe vice
+view vine visa void volt vote wade wage wait wake walk wall wand want ward ware warm warn warp wart
+wash wasp wave wavy weak wean wear weed week weep weld well went were west what when whip whom wide
+wife wild will wind wine wing wink wipe wire wise wish with wolf wood wool word wore work worm worn
+wrap yard yarn yawn yeah year yell your zeal zero zest zinc zone zoom
+about above acorn adapt admit adopt adult after again agent agile aglow agree ahead aisle alarm album
+alert alien align alike alive alloy alone along alpha altar alter amber amend among ample angel anger
+angle angry ankle apart apple apply arena argue arise armor aroma arrow ascot ashen aside asset atlas
+audio audit avoid await awake award aware badge basil basic basin batch beach beard beast begin being
+belle bench berry birch birth black blade blame blank blast blaze bleak blend bless blind bliss block
+blood bloom blown blues blunt blush board boast bonus boost booth bound brace braid brain brake brand
+brass brave bread break breed brick bride brief bring brisk broad broke brook broom brown brush build
+built bunch bunny burst cabin cable cameo canal candy canoe canon cargo carol carve catch cause cedar
+chain chair chalk charm chart chase cheap check cheek cheer chess chest chief child chill china chose
+chunk churn cider cigar civic civil claim clamp clash clasp class clean clear clerk click cliff climb
+cling cloak clock clone close cloth cloud clown coach coast cobra cocoa comet comic coral corps couch
+cough could count court cover crack craft crane crash crate crave crawl crazy cream creek crest cried
+crime crisp cross crowd crown crude cruel crumb crush crust crypt cubic curve cyber cycle daily dairy
+daisy dance dandy dared darts dealt death debit debut decal decay decor delta demon dense depot depth
+derby devil diary digit dimly diner dingo dirty ditch diver dizzy dodge doing donor doubt dough dozen
+draft drain drama drank drape drawn dream dress dried drift drill drink drive drone drove drown drums
+dryer duchy dwarf dwell eager eagle early earth easel eaten eight elbow elder elect elite elope elude
+ember empty enact ended enemy enjoy enter entry envoy equal equip erase error essay ether ethic event
+every exact exile exist extra fable faced facet faith false fancy fatal fault favor feast fence ferry
+fever fiber field fiery fifth fifty fight final finch finer first fixed flame flare flash fleet flesh
+flick fling flint float flock flood floor flora flour fluid flute focal focus foggy folly force forge
+forth forty forum found frame fraud fresh fried frost frown fruit fudge fully funny gauge gecko genie
+genre ghost giant giddy given giver glade gland glare glass glaze gleam glide globe gloom glory glove
+gnome going gonna goose grace grade grain grand grant grape graph grasp grass grave graze great greed
+green greet grief grill grime grind groan groom grove growl grown gruel guard guess guest guide guild
+guilt gully gusto habit hairy handy happy hardy harsh haste hatch haunt haven havoc hazel heard heart
+heavy hedge hefty hello hence herbs hertz hilly hinge hippo hobby hoist holly homer honey honor horde
+horse hotel hound hours house hover human humid humor hurry hydro hyena ideal idiom image imply index
+indie inert infer inlet inner input intro irate irony issue ivory jelly jewel jiffy joint joker jolly
+judge juice juicy jumbo karma kayak kebab kneel knife knock known koala label labor lance lapse large
+larva laser lasso latch later laugh layer leach leads leafy leaky learn lease leash least leave ledge
+legal lemon level lever light lilac limbo limit linen liner lingo lithe liver lives llama loath lobby
+local lodge lofty logic loose lorry loser lotus loyal lucid lucky lunar lunch lurch lyric macho macro
+madly magic magma major maker mango mania manor maple march marsh mason match mauve maybe mayor mecca
+medal media medic melon mercy merge merit merry metal meter micro midst might mimic miner minor minus
+mirth miser mixed model modem moist molar money month moody moose moral morph motel motor motto mould
+mound mount mourn mouse mouth mover movie mucus mummy mural mused music musky nacho naive naked named
+nanny nasal nasty naval navel needy nerve never newer newly niche niece night ninja ninth noble noise
+noisy nomad north notch noted novel nudge nurse nylon oasis occur ocean offer often olive omega onion
+onset opera opium optic orbit order organ other otter ought ounce outdo outer ovary owner oxide ozone
+paced paddy pagan pager paint panel panic paper parka party pasta paste patch patio pause peace peach
+pearl pedal penny perch peril petal phase phone photo piano picky piece pilot pinch pitch pivot pixel
+pizza place plain plane plank plant plate plaza plead pleat pluck plumb plume plush poems point poise
+poker polar polio polka poppy porch pouch pound power prank press price pride prime print prior prism
+privy prize probe prone proof prose proud prove prowl proxy prune pulse punch pupil puppy purge purse
+pygmy quail quake qualm quart queen queer query quest queue quick quiet quill quilt quirk quota quote
+rabbi racer radar radio rainy raise rally ranch range rapid ratio raven reach react ready realm rebel
+recap refer regal reign relax relay relic remit renew repay reply reset resin retro rhino rhyme ridge
+rifle right rigid rinse ripen risen risky rival river roast robin robot rocky rogue roman rough round
+route royal rugby ruler rumor rural sable sadly safer saint salad salon salsa salty salve samba sandy
+satin sauce saucy sauna saved savor savvy scale scalp scarf scary scene scent scoop scope score scorn
+scout scrap screw scrub seize sense serum serve seven sever shade shaft shake shale shall shame shape
+share shark sharp shave shawl shear sheen sheep sheer sheet shelf shell shift shine shiny shirt shock
+shone shore short shout shove shown shrub shrug siege sight sigma silky silly since sixth sixty skate
+skier skill skirt skull slain slant slate slave sleek sleep sleet slept slice slide slime sling slope
+sloth small smart smash smell smile smirk smoke snack snail snake snare sneak snipe snore snout snowy
+soapy sober solar solid solve sonar sonic sorry sound south space spade spare spark spasm spawn speak
+spear speck speed spell spend spent spice spicy spike spill spine spiny spire spite splat split spoil
+spoke spoon sport spout spray spree sprig spurn squad squat squid stack staff stage stain stair stake
+stale stalk stall stamp stand stare stark start state stave stead steak steal steam steel steep steer
+stern stick stiff still sting stint stock stoic stole stomp stone stony stood stool stoop store storm
+story stout stove strap straw stray strip strut stuck study stuff stump stung stunt style suave sugar
+suite sunny super surge sushi swamp swarm swear sweat sweep sweet swell swept swift swine swing swirl
+sword swore syrup table taboo tacit tacky talent tally talon tango tapir tarot taunt teach tempo tenor
+tense tenth tepid thank theft their theme there these thick thief thigh thing think third thorn those
+three threw throb throw thumb thump tiara tibia tidal tiger tight timer times timid tipsy titan title
+toast today token tonal tonic tooth topaz topic torch total totem touch tough towel tower toxic trace
+track tract trade trail train trait tramp trash trawl tread treat trend trial tribe trick tried tries
+trout truce truck truly trunk trust truth tulip tumor tunic turbo tutor tweed tweet twice twine twist
+udder ulcer ultra uncle under undue unfit union unite unity until upper upset urban urged usage usher
+usual utter vague valet valid valor value valve vapor vault venom venue verge verse vicar video vigil
+vigor villa vinyl viola viper viral virus visit vital vivid vocal vodka vogue voice voter vouch vowel
+wafer wager wagon waist waltz waste watch water waver waxen weary weave wedge weigh weird whale wharf
+wheat wheel where which while whirl whisk white whole whose widen wider widow width wield wince winch
+windy wiper wired wiser witch witty woken woman women world worry worse worst worth would wound woven
+wrath wreck wrist write wrong wrote yacht yeast yield young yours youth zebra zesty zonal
+crypto bitcoin ethereum token wallet trader invest startup founder studio agency
+brand design master expert genius legend hunter warrior phantom shadow

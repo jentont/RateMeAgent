@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<meta name="theme-color" content="#111114">
+<title>Батл профилей</title>
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Onest:wght@400;500;600;700&family=Unbounded:wght@700;800;900&display=swap" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+<!-- Иконки одной линией: 24×24, обводка 1.7, без заливок и без цвета. -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <g id="i-trophy"><path d="M7 4h10v4a5 5 0 0 1-10 0z"/><path d="M7 6H4.5a2.5 2.5 0 0 0 2.6 3.5M17 6h2.5a2.5 2.5 0 0 1-2.6 3.5"/><path d="M12 13v4M8.5 20h7M9.5 17h5"/></g>
+    <g id="i-swords"><path d="M4 4l9 9M4 4h4M4 4v4"/><path d="M20 4l-9 9M20 4h-4M20 4v4"/><path d="M7 14l3 3M5.5 18.5l2-2M17 14l-3 3M18.5 18.5l-2-2"/></g>
+    <g id="i-at"><circle cx="12" cy="12" r="3.6"/><path d="M15.6 12v1.4a2.3 2.3 0 0 0 4.6 0V12a8.2 8.2 0 1 0-3.4 6.6"/></g>
+    <g id="i-wallet"><rect x="3.5" y="6" width="17" height="13" rx="2.6"/><path d="M3.5 9.5h17"/><path d="M15.5 14h2"/><path d="M6 6l9.5-2.4a1.4 1.4 0 0 1 1.7 1.3V6"/></g>
+    <g id="i-refresh"><path d="M19 12a7 7 0 1 1-2.1-5"/><path d="M19 4.5V8h-3.5"/></g>
+    <g id="i-left"><path d="M14.5 6l-6 6 6 6"/></g>
+    <g id="i-right"><path d="M9.5 6l6 6-6 6"/></g>
+    <g id="i-info"><circle cx="12" cy="12" r="8.2"/><path d="M12 11v5.2M12 7.8v.4"/></g>
+    <g id="i-x"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></g>
+    <g id="i-gift"><path d="M4.5 11.5h15V20a1 1 0 0 1-1 1h-13a1 1 0 0 1-1-1z"/><path d="M3.5 8h17v3.5h-17z"/><path d="M12 8v13"/><path d="M12 8S10.8 4 8.8 4a2 2 0 0 0 0 4zM12 8s1.2-4 3.2-4a2 2 0 0 1 0 4z"/></g>
+    <!-- Звезда Telegram Stars — единственное место с цветом: это валюта. -->
+    <symbol id="xtr" viewBox="0 0 24 24"><path fill="#F5B83D" d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5-4.7-4.6 6.5-.9z"/></symbol>
+  </defs>
+</svg>
+
+<div id="app">
+  <header class="top">
+    <div class="who">
+      <div class="ava" id="ava"></div>
+      <div class="who-text">
+        <div class="who-name" id="who-name">…</div>
+        <div class="who-note">батл профилей)</div>
+      </div>
+    </div>
+    <button class="balance" id="balance-pill" data-go="wallet">
+      <svg class="star"><use href="#xtr"/></svg><span id="balance">0</span>
+    </button>
+  </header>
+
+  <main id="screens">
+    <!-- Турнир недели -->
+    <section class="screen active" id="s-tourney">
+      <div class="card hero">
+        <div class="hero-head">
+          <div>
+            <div class="kicker">Турнир недели</div>
+            <div class="hero-bank"><svg class="star"><use href="#xtr"/></svg><span id="t-prize">0</span></div>
+            <div class="muted" id="t-meta">…</div>
+          </div>
+          <img class="solik" src="solik.png" alt="">
+        </div>
+        <div class="podium" id="t-podium"></div>
+      </div>
+
+      <div class="card mine">
+        <div class="mine-score"><span id="t-score">—</span><small>/10</small></div>
+        <div class="mine-text">
+          <div class="mine-title" id="t-place">Твой балл профиля</div>
+          <div class="muted" id="t-hint">…</div>
+        </div>
+        <button class="icon-btn" id="rescore" aria-label="Переоценить"><svg><use href="#i-refresh"/></svg></button>
+      </div>
+      <button class="btn primary" id="t-join">Участвовать</button>
+
+      <div class="card list">
+        <div class="list-head"><span>Таблица</span><span class="pager" id="t-pager"></span></div>
+        <div id="t-rows"></div>
+      </div>
+    </section>
+
+    <!-- Дуэли профилей и ников: одна разметка, разные данные -->
+    <section class="screen" id="s-duel" data-kind="profile"></section>
+    <section class="screen" id="s-nick" data-kind="nick"></section>
+
+    <!-- Кошелёк -->
+    <section class="screen" id="s-wallet">
+      <div class="card wallet">
+        <div class="kicker light">Баланс батла</div>
+        <div class="wallet-sum"><svg class="star"><use href="#xtr"/></svg><span id="w-balance">0</span></div>
+        <div class="wallet-note">выигрыш выводится подарками Telegram)</div>
+        <img class="solik wallet-cat" src="solik.png" alt="">
+      </div>
+      <div class="card">
+        <div class="list-head"><span>Пополнить</span></div>
+        <div class="chips" id="w-topups"></div>
+      </div>
+      <div class="card">
+        <div class="list-head"><span>Вывести подарками</span><span class="muted" id="w-min"></span></div>
+        <div class="row-input">
+          <input id="w-amount" inputmode="numeric" placeholder="Сколько звёзд">
+          <button class="btn primary small" id="w-go"><svg><use href="#i-gift"/></svg>Вывести</button>
+        </div>
+      </div>
+      <div class="card list">
+        <div class="list-head"><span>История</span><span class="pager" id="w-pager"></span></div>
+        <div id="w-rows"></div>
+      </div>
+    </section>
+  </main>
+
+  <nav class="tabbar">
+    <button class="tab active" data-go="tourney"><svg><use href="#i-trophy"/></svg><span>Турнир</span></button>
+    <button class="tab" data-go="duel"><svg><use href="#i-swords"/></svg><span>Дуэли</span></button>
+    <button class="tab" data-go="nick"><svg><use href="#i-at"/></svg><span>Ники</span></button>
+    <button class="tab" data-go="wallet"><svg><use href="#i-wallet"/></svg><span>Кошелёк</span></button>
+  </nav>
+</div>
+
+<!-- Итог дуэли и подтверждения -->
+<div class="sheet" id="sheet" hidden>
+  <div class="sheet-card" id="sheet-card"></div>
+</div>
+<div class="toast" id="toast" hidden></div>
+
+<script src="app.js"></script>
+</body>
+</html>
