@@ -103,7 +103,8 @@ async def ensure(bot: Bot, log=print) -> str:
 
 async def main() -> None:
     config.check()
-    session = AiohttpSession(proxy=config.PROXY) if config.PROXY else None
+    proxy = config.live_proxy()
+    session = AiohttpSession(proxy=proxy) if proxy else None
     bot = Bot(config.BOT_TOKEN, session=session)
     try:
         name = await ensure(bot)

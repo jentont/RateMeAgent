@@ -29,6 +29,30 @@ ADMIN_IDS = _ints(os.getenv("ADMIN_IDS"))
 #: Пусто — берётся из HTTPS_PROXY, если он задан в системе.
 PROXY = (os.getenv("PROXY") or os.getenv("HTTPS_PROXY") or os.getenv("https_proxy") or "").strip()
 
+
+def live_proxy() -> str:
+    """PROXY, если он отвечает; иначе пусто — и бот идёт в Telegram напрямую.
+
+    Прокси нужен дома за VPN, а на хостинге его нет. Если .env залили туда
+    целиком вместе со строкой PROXY, без этой проверки бот падал на старте:
+    «Couldn't connect to proxy 127.0.0.1:…».
+    """
+    if not PROXY:
+        return ""
+    import logging
+    import socket
+    from urllib.parse import urlsplit
+
+    parts = urlsplit(PROXY if "://" in PROXY else f"http://{PROXY}")
+    try:
+        socket.create_connection((parts.hostname, parts.port or 80), timeout=3).close()
+        return PROXY
+    except OSError:
+        logging.getLogger("profilerate").warning(
+            "прокси %s не отвечает — работаю без него, напрямую", PROXY
+        )
+        return ""
+
 #: Склад картинок для инлайна: приватный канал, где бот админ (id вида
 #: -100…). Инлайн-фото Telegram берёт только по file_id, поэтому карточку
 #: сначала надо куда-то залить. Пусто — бот заливает в личку владельца

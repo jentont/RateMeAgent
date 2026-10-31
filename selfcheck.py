@@ -239,6 +239,16 @@ async def checks() -> None:
     ok(sent[-1][0] == "photo" and "@vasya" in sent[-1][1], "/rate ответом в группе")
 
 
+    print("прокси")
+    import config as cfg_proxy
+
+    was = cfg_proxy.PROXY
+    cfg_proxy.PROXY = "http://127.0.0.1:1"
+    ok(cfg_proxy.live_proxy() == "", "мёртвый прокси (хостинг без VPN) — бот идёт напрямую, не падает")
+    cfg_proxy.PROXY = ""
+    ok(cfg_proxy.live_proxy() == "", "без прокси — напрямую")
+    cfg_proxy.PROXY = was
+
     print("премиум-эмодзи")
     import emoji
     from aiogram.methods import SendMessage

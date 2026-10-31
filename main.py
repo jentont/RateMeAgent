@@ -1166,7 +1166,8 @@ async def accept_battle(call: CallbackQuery, bot: Bot) -> None:
 async def main() -> None:
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(name)s: %(message)s")
     config.check()
-    session = AiohttpSession(proxy=config.PROXY) if config.PROXY else None
+    proxy = config.live_proxy()
+    session = AiohttpSession(proxy=proxy) if proxy else None
     bot = Bot(
         config.BOT_TOKEN,
         session=session,
